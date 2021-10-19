@@ -23,7 +23,7 @@ app.use('/api/v1/blogs', blogs);
 app.use('/api/v1/auth', auths);
 
 
-const PORT = process.env.port || 5000
+const PORT = process.env.PORT || 5000
 
 const start = async() => {
     try {

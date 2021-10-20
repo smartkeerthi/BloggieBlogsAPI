@@ -3,6 +3,7 @@ const connectDb = require('./db/connectDb');
 require('dotenv').config();
 const blogs = require('./routes/blogs');
 const auths = require('./routes/auths');
+const images = require('./routes/images');
 
 
 // server initializing
@@ -21,6 +22,8 @@ app.get('/', (req, res) => {
 app.use('/api/v1/blogs', blogs);
 
 app.use('/api/v1/auth', auths);
+
+app.use('/api/v1/images', images);
 
 
 const PORT = process.env.PORT || 5000

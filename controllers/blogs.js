@@ -48,7 +48,7 @@ const deleteBlogPost = async(req, res) => {
 
 const getAuthorPost = async(req, res) => {
     try {
-        const authorPost = await blogSchema.find({author: req.params.author});
+        const authorPost = await blogSchema.find({author: req.params.author}).sort({createdAt: -1});
         res.status(200).json(authorPost);
     } catch (error) {
         res.status(500).json({'mes':error.message});
